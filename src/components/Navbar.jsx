@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   alpha,
   AppBar,
@@ -29,11 +30,14 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     width: "50%",
     [theme.breakpoints.down("sm")]: {
-      display: "none",
+      display: (props) => (props.open ? "flex" : "none"),
     },
   },
   searchButton: {
     marginLeft: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
   input: {
     color: "#fff",
@@ -44,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     "& > *": {
       marginLeft: theme.spacing(2),
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: (props) => (props.open ? "none" : "flex"),
     },
   },
   logoLg: {
@@ -61,7 +68,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navbar = () => {
-  const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const classes = useStyles({ open });
 
   return (
     <AppBar>
@@ -77,7 +85,10 @@ const Navbar = () => {
           <InputBase placeholder="Search..." className={classes.input} />
         </div>
         <div className={classes.icons}>
-          <Search className={classes.searchButton} />
+          <Search
+            className={classes.searchButton}
+            onClick={() => setOpen(!open)}
+          />
           <Badge badgeContent={4} color="secondary">
             <MailOutlined />
           </Badge>
