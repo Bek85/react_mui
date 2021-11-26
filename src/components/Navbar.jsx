@@ -4,6 +4,7 @@ import {
   AppBar,
   Avatar,
   Badge,
+  Container,
   InputBase,
   makeStyles,
   Toolbar,
@@ -80,38 +81,40 @@ const Navbar = () => {
 
   return (
     <AppBar position="fixed">
-      <Toolbar className={classes.toolbar}>
-        <Typography variant="h6" className={classes.logoLg}>
-          Alex Dev
-        </Typography>
-        <Typography variant="h6" className={classes.logoSm}>
-          Alex
-        </Typography>
-        <div className={classes.search}>
-          <Search />
-          <InputBase placeholder="Search..." className={classes.input} />
-          <Cancel
-            className={classes.cancelIcon}
-            onClick={() => setOpen(false)}
-          />
-        </div>
-        <div className={classes.icons}>
-          <Search
-            className={classes.searchButton}
-            onClick={() => setOpen(true)}
-          />
-          <Badge badgeContent={4} color="secondary">
-            <MailOutlined />
-          </Badge>
-          <Badge badgeContent={2} color="secondary">
-            <NotificationsOutlined />
-          </Badge>
-          <Avatar
-            alt="Alex Smith"
-            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          />
-        </div>
-      </Toolbar>
+      <Container>
+        <Toolbar className={classes.toolbar}>
+          <Typography variant="h6" className={classes.logoLg}>
+            Alex Dev
+          </Typography>
+          <Typography variant="h6" className={classes.logoSm}>
+            Alex
+          </Typography>
+          <div className={classes.search}>
+            <Search />
+            <InputBase placeholder="Search..." className={classes.input} />
+            <Cancel
+              className={classes.cancelIcon}
+              onClick={() => setOpen(false)}
+            />
+          </div>
+          <div className={classes.icons}>
+            <Search
+              className={classes.searchButton}
+              onClick={() => setOpen(true)}
+            />
+            <Badge badgeContent={4} color="secondary">
+              <MailOutlined />
+            </Badge>
+            <Badge badgeContent={2} color="secondary">
+              <NotificationsOutlined />
+            </Badge>
+            <Avatar
+              alt="Alex Smith"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            />
+          </div>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };
