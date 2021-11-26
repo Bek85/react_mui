@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel serve src/index.html --open firefox",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
@@ -27,7 +27,5 @@
     "parcel": "^2.0.1",
     "prettier": "^2.5.0"
   },
-  "browserslist": [
-    "last 2 Chrome versions"
-  ]
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }

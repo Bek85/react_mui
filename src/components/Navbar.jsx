@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import {
+  Cancel,
   MailOutlined,
   NotificationsOutlined,
   Search,
@@ -29,8 +30,9 @@ const useStyles = makeStyles((theme) => ({
     },
     borderRadius: theme.shape.borderRadius,
     width: "50%",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: (props) => (props.open ? "flex" : "none"),
+      width: "60%",
     },
   },
   searchButton: {
@@ -51,6 +53,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       display: (props) => (props.open ? "none" : "flex"),
+    },
+  },
+  cancelIcon: {
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
     },
   },
   logoLg: {
@@ -83,11 +90,15 @@ const Navbar = () => {
         <div className={classes.search}>
           <Search />
           <InputBase placeholder="Search..." className={classes.input} />
+          <Cancel
+            className={classes.cancelIcon}
+            onClick={() => setOpen(false)}
+          />
         </div>
         <div className={classes.icons}>
           <Search
             className={classes.searchButton}
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen(true)}
           />
           <Badge badgeContent={4} color="secondary">
             <MailOutlined />
