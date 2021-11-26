@@ -1,4 +1,4 @@
-import { Container, makeStyles, Typography } from "@material-ui/core";
+import { Container, makeStyles, Typography } from '@material-ui/core';
 import {
   Home,
   Person,
@@ -10,39 +10,39 @@ import {
   Storefront,
   Settings,
   ExitToApp,
-} from "@material-ui/icons";
+} from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: "100vh",
-    color: "#fff",
+    height: '100vh',
+    color: '#fff',
     paddingTop: theme.spacing(10),
     backgroundColor: theme.palette.primary.main,
-    [theme.breakpoints.up("sm")]: {
-      backgroundColor: "#fff",
-      color: "#555",
-      border: "1px solid #999",
+    [theme.breakpoints.up('sm')]: {
+      backgroundColor: '#fff',
+      color: '#555',
+      border: '1px solid #999',
     },
   },
   item: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     marginBottom: theme.spacing(4),
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up('sm')]: {
       marginBottom: theme.spacing(3),
-      cursor: "pointer",
+      cursor: 'pointer',
     },
   },
   text: {
-    fontWeight: "500",
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
+    fontWeight: '500',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
     },
   },
   icon: {
     marginRight: theme.spacing(1),
-    [theme.breakpoints.up("sm")]: {
-      fontSize: "18px",
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '18px',
     },
   },
 }));

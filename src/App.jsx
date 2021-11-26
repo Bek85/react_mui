@@ -1,13 +1,13 @@
-import { Grid, makeStyles } from "@material-ui/core";
-import LeftBar from "./components/LeftBar";
-import Feed from "./components/Feed";
-import Navbar from "./components/Navbar";
-import RightBar from "./components/RightBar";
+import { Grid, makeStyles } from '@material-ui/core';
+import LeftBar from './components/LeftBar';
+import Feed from './components/Feed';
+import Navbar from './components/Navbar';
+import RightBar from './components/RightBar';
 
 const useStyles = makeStyles((theme) => ({
   right: {
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
     },
   },
 }));
