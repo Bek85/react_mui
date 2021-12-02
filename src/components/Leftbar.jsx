@@ -18,10 +18,12 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     paddingTop: theme.spacing(10),
     backgroundColor: theme.palette.primary.main,
-    [theme.breakpoints.up('sm')]: {
+    position: 'sticky',
+    top: 0,
+    [theme.breakpoints.up('md')]: {
       backgroundColor: '#fff',
       color: '#555',
-      border: '1px solid #999',
+      border: '1px solid #ece7e7',
     },
   },
   item: {
@@ -35,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     fontWeight: '500',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       display: 'none',
     },
   },
