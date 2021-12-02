@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     left: 0,
     margin: 'auto',
+    [theme.breakpoints.down('xs')]: {
+      width: '100vw',
+      height: '100vh',
+    },
   },
 }));
 
