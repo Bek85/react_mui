@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 250,
     [theme.breakpoints.down('sm')]: {
-      height: 150
-    }
-  }
+      height: 150,
+    },
+  },
 }));
 
 const Post = () => {
